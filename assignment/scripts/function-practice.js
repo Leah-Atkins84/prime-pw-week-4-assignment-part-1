@@ -57,18 +57,42 @@ console.log( '-3 isPositive - should say false', isPositive(-3) );
 
 // 6. Function to return the _last_ item in an array. If the
 //    array is empty, return `undefined`.
-let array = []
-function getLast( array ) {
+let numberArray = [ 1, 2, 3, 4]
+function getLastNumber(){
+  let getLastNumber = numberArray.slice(-1);
+  return getLastNumber;
+}
+let favColors = ['Turquoise', 'Teal', 'Blue-greens']
+function getLast(){
+  let getLast = favColors.slice(-1);
+  return getLast;
+}
+let undefinedArray = [];
+function getLastArray(){
+  let getLast = undefinedArray.slice(-1);
   return undefined;
 }
-console.log(array.slice(-1)[0]);
+console.log('Testing get last function- last item should say 4:', getLastNumber(numberArray))
+console.log('Testing get last function- last item should say Blue-greens:', getLast(favColors));
+console.log('Testing get last function- last item should say:', getLastArray());
 // 7. Function to find a value in an array. Return true if the
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find
+let labTestAccronyms = [ 'hgb', 'a1c', 'cbc', 'hft', 'bmp']
+let labNumbers = [12, 5.6, 9, 20, 143]
+
 function find( value, array ){
-
+  for (let i = 0; i <array.length; i++){
+    if (array [i] === value){
+      return true;
+    }
+  }
+    return false;
 }
-
+console.log('is hgb a lab test?:', find('hgb', labTestAccronyms));
+console.log('is cbc a lab test?:', find('cbc', labTestAccronyms));
+console.log('is 5.6 a lab number?:', find(5.6, labNumbers) );
+console.log('is 47 a lab number?:', find(47, labNumbers));//should say false
 // ----------------------
 // Stretch Goals
 // ----------------------
