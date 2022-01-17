@@ -14,11 +14,12 @@ console.log('Test - should say "Hello World!"', hello());
 
 // 2. Function to return an personalized hello, using the `name` argument.
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
-function helloName( Leah ) {
-  return 'Hello, Leah!';
+function helloName() {
+  return 'Hello Leah!';
 }
 // Remember to call the function to test
 console.log(helloName());
+
 
 // 3. Function to add two numbers together & return the result
 function addNumbers( firstNumber, secondNumber ) {
@@ -59,22 +60,12 @@ console.log( '-3 isPositive - should say false', isPositive(-3) );
 //    array is empty, return `undefined`.
 let numberArray = [ 1, 2, 3, 4]
 function getLastNumber(){
-  let getLastNumber = numberArray.slice(-1);
+  let getLastNumber = numberArray[numberArray.length -1];
   return getLastNumber;
 }
-let favColors = ['Turquoise', 'Teal', 'Blue-greens']
-function getLast(){
-  let getLast = favColors.slice(-1);
-  return getLast;
-}
-let undefinedArray = [];
-function getLastArray(){
-  let getLast = undefinedArray.slice(-1);
-  return undefined;
-}
+
 console.log('Testing get last function- last item should say 4:', getLastNumber(numberArray))
-console.log('Testing get last function- last item should say Blue-greens:', getLast(favColors));
-console.log('Testing get last function- last item should say:', getLastArray());
+
 // 7. Function to find a value in an array. Return true if the
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find
